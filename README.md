@@ -54,3 +54,4 @@ Output: A test.dot and a test.png file visualizing the generated galaxy
 - Use some kind of distribution to determine number of nodes pr cluster (it's a static value now) Bell-curve perhaps?
 - Add a check that determines if there's any unconnected nodes. If there is, either remove those nodes or run the algorithm over again.
 - Use the proper method of calculating number of links out of a system. The current one doesn't take star size into account
+- Randomize the order of the nodes before starting on edge creation. Right now the first nodes will get more edges on average since the later nodes may roll to link to them, even though they already have their maximum amount of links. This is less likely to happen to the later nodes though, since they will not attempt to create a new edge from the node if it already has the maximum number of edges. 
