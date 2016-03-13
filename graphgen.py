@@ -138,7 +138,10 @@ if __name__ == '__main__':
     g = Galaxy(
         {
             0: {'n': 1, 'nodes_per_cluster': 20, 'cum_prob': [1]},
-            1: {'n': 6, 'nodes_per_cluster': 10, 'cum_prob': [0.70, 0.90, 1]},
+            1: {'n': 3, 'nodes_per_cluster': 10, 'cum_prob': [0.70, 0.90, 1]},
+            2: {'n': 6, 'nodes_per_cluster': 10, 'cum_prob': [0.70, 0.80, 0.90, 1]},
+            3: {'n': 6, 'nodes_per_cluster': 10, 'cum_prob': [0.50, 0.50, 0.75, 1]},
+            4: {'n': 6, 'nodes_per_cluster': 10, 'cum_prob': [0.50, 0.50, 0.50, 0.75, 1]},
         }
     )
     g.create_nodes()
