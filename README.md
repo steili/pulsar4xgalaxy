@@ -1,8 +1,8 @@
 # pulsar4xgalaxy
-POC Python script that generates a galaxy with customizable clustering parameters
 
-Proof of Concept of a galaxy creation algorithm with customizable clustering;
+Proof of Concept of a galaxy creation algorithm with customizable clustering
 
+# Short description
 The galaxy is divided into clusters, all nodes (i.e. systems) belongs to a cluster
 The clusters are divided into different levels.
 - All clusters of the same level has the same amount of nodes
@@ -21,11 +21,15 @@ NOTE that for obvious reasons, the last number has to be 1
 - The algorithm uses the same "dormant" jump point concept as Aurora does, i.e. it doesn't check whether the target node has any "available" edges before creating the edge to the node.
   The result of this is that the average number of links will be higher than what you'd expect from looking at the function that gives the number of edges for the nodes
 
+# Requirements
 You need to have installed GraphViz and pydot to run this script.
+
+# Output
 
 Output: A test.dot and a test.png file visualizing the generated galaxy
 
-Things that could be added/improved on:
+# Future work
+
 - Use some kind of distribution to determine number of nodes pr cluster (it's a static value now) Bell-curve perhaps?
 - Add a check that determines if there's any unconnected nodes. If there is, either remove those nodes or run the algorithm over again.
 - Use the proper method of calculating number of links out of a system. The current one doesn't take star size into account
